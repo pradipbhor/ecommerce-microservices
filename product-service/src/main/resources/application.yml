@@ -1,0 +1,28 @@
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: product-service
+    
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecommerce_product_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root  # or ecommerce_user if you created one
+    password: your_password  # replace with your password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    
+  jpa:
+    hibernate:
+      ddl-auto: update  # Use 'create-drop' for development, 'update' for production
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        
+logging:
+  level:
+    com.ecommerce.product: DEBUG
+    org.springframework.web: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
