@@ -292,3 +292,17 @@ You're ready to move to the next service! Would you like to proceed with:
 - **API Gateway** (with rate limiting)
 
 Let me know which service you'd like to implement next!
+
+
+API Endpoints Summary:
+
+POST /api/products - Create product
+GET /api/products/{id} - Get by ID
+GET /api/products - Get all (paginated)
+PUT /api/products/{id} - Update product
+DELETE /api/products/{id} - Soft delete
+PUT /api/products/{id}/stock - Update stock
+GET /api/products/search?query= - Search products
+GET /api/products/category/{category} - Filter by category
+GET /api/products/low-stock - Get low stock items
+GET /api/products/{id}/check-stock - Check availability
